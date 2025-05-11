@@ -6,7 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import Weather from "./Weather";
 
 const LeftDashboard = () => {
-  const [city, setCity] = useState();
+  const [city, setCity] = useState("Dhaka");
   const [currentDateTime, setCurrentDateTime] = useState("");
   const inputRef = useRef();
   useEffect(() => {
@@ -51,7 +51,7 @@ const LeftDashboard = () => {
               ref={inputRef}
               className="text-gray-700 text-lg py-2"
               type="text"
-              placeholder="Enter city"
+              placeholder="Dhaka"
               required
             />
           </label>

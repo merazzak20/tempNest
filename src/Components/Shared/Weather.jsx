@@ -8,6 +8,8 @@ import axios from "axios";
 import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
 import { MdOutlineWindPower } from "react-icons/md";
 import { FaWater } from "react-icons/fa";
+import Spinner from "./Spinner";
+
 const Weather = ({ city }) => {
   const [weatherData, setWeatherData] = useState();
 
@@ -26,7 +28,7 @@ const Weather = ({ city }) => {
     "13d": snow,
     "13n": snow,
   };
-
+  // api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key}
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -34,10 +36,10 @@ const Weather = ({ city }) => {
           import.meta.env.VITE_WEATHER_API_KEY
         }&units=metric`
       );
-      console.log(response.data);
+      // console.log(response.data);
       const wData = response.data;
       const icon = allicons[wData.weather[0].icon] || clear;
-      console.log(icon);
+      // console.log(icon);
       setWeatherData({
         city: wData.name,
         humidity: wData.main.humidity,
@@ -57,6 +59,14 @@ const Weather = ({ city }) => {
   useEffect(() => {
     console.log(weatherData);
   }, [weatherData]);
+
+  if (!weatherData) {
+    return (
+      // <div className="text-[#074460] text-4xl font-bold mt-2">Loading...</div>
+      <Spinner></Spinner>
+    );
+  }
+
   return (
     <div>
       {/* weather */}
@@ -70,7 +80,7 @@ const Weather = ({ city }) => {
         </p>
 
         {/* max min temp */}
-        {/* <div className="flex justify-evenly mt-4">
+        <div className="flex justify-evenly mt-4">
           <div className="flex items-center gap-2 text-[#074460] text-lg font-semibold">
             <BiSolidUpArrow />
             <p>
@@ -83,7 +93,7 @@ const Weather = ({ city }) => {
               {weatherData?.min_temp} <span>&#176;</span> C
             </p>
           </div>
-        </div> */}
+        </div>
 
         {/*Humidity and wind */}
         <div className="flex justify-between mt-10">
