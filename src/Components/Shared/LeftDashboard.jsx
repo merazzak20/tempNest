@@ -2,13 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import logo from "../../../src/assets/logo1.png";
 import { FaSearch } from "react-icons/fa";
-// import clear from "../../assets/clear.png";
 import Weather from "./Weather";
 
-const LeftDashboard = () => {
-  const [city, setCity] = useState("Dhaka");
+const LeftDashboard = ({ city, setCity }) => {
   const [currentDateTime, setCurrentDateTime] = useState("");
   const inputRef = useRef();
+
   useEffect(() => {
     const updateDateTime = () => {
       const now = new Date();
@@ -44,7 +43,7 @@ const LeftDashboard = () => {
         {/* Search bar */}
         <form
           onSubmit={handleFormSubmit}
-          className="flex flex-row gap-2 my-4 text-center"
+          className="flex flex-row gap-2 my-4 text-center mx-auto"
         >
           <label className="input py-2 bg-white focus:border-none rounded-full">
             <input
