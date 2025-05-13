@@ -56,9 +56,9 @@ const Weather = ({ city }) => {
   useEffect(() => {
     fetchData();
   }, [city]);
-  useEffect(() => {
-    console.log(weatherData);
-  }, [weatherData]);
+  // useEffect(() => {
+  //   // console.log(weatherData);
+  // }, [weatherData]);
 
   if (!weatherData) {
     return (

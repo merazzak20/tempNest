@@ -3,6 +3,7 @@ import Container from "./Container";
 import logo from "../../../src/assets/logo1.png";
 import { FaSearch } from "react-icons/fa";
 import Weather from "./Weather";
+import Footer from "./Footer";
 
 const LeftDashboard = ({ city, setCity }) => {
   const [currentDateTime, setCurrentDateTime] = useState("");
@@ -34,7 +35,7 @@ const LeftDashboard = ({ city, setCity }) => {
     setCity(inputRef.current.value); // Set the city from the input value
   };
   return (
-    <div className="bg-gradient-to-t from-cyan-100 to-cyan-200 min-h-[100vh]">
+    <div className="bg-gradient-to-t from-cyan-100 to-cyan-200 min-h-full">
       <Container>
         <div className="flex gap-2 items-center py-3 text-center">
           <img className="w-[300px]" src={logo} alt="Wheater Update" />
@@ -71,6 +72,8 @@ const LeftDashboard = ({ city, setCity }) => {
             {currentDateTime}
           </p>
         </div>
+
+        <Footer></Footer>
       </Container>
     </div>
   );

@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import WeatherCard from "./WeatherCard";
+import Graph from "./Graph";
 
 const RightDashboard = ({ city }) => {
   const [forcastData, setForcastData] = useState();
-  console.log(city);
+  const [allData, setAllData] = useState();
+  // console.log(city);
 
   const forcast = async () => {
     try {
@@ -14,8 +16,9 @@ const RightDashboard = ({ city }) => {
         }&units=metric`
       );
       //   console.log(response.data.list);
-      const fData = response.data.list;
-      const dailyData = fData.filter((item) => {
+      const fData = await response.data.list;
+      setAllData(fData.slice(0, 6));
+      const dailyData = await fData.filter((item) => {
         const itemDate = new Date(item?.dt_txt).toDateString();
         const toDay = new Date().toDateString();
         return item.dt_txt.includes("12:00:00") && itemDate !== toDay;
@@ -25,13 +28,15 @@ const RightDashboard = ({ city }) => {
       console.log(err);
     }
   };
-  console.log(forcastData);
+  // console.log(forcastData);
   useEffect(() => {
     forcast();
   }, [city]);
+  // console.log(allData);
   return (
     <div className="text-[#074460] mt-2 ">
-      <div className="grid grid-col-2 md:grid-cols-4 gap-2 ">
+      <Graph fData={allData}></Graph>
+      <div className="grid grid-col-2 md:grid-cols-4 gap-2 mt-8 ">
         {forcastData?.map((day, idx) => (
           <WeatherCard id={idx} day={day}></WeatherCard>
         ))}
