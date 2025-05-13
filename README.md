@@ -8,7 +8,7 @@
 
 ## 🖼️ App Preview  
 
-![TempNest UI](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22modified_image%20(27).png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22signedurl_expire%22%3A%222028-05-12T18%3A06%3A26.224Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2Fb3e60013fb944f5e%2Fmodified_image%2520(27).png%3FExpires%3D1841767586%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3Dc4yXRb93Xgq9EVRzHrl6fjXKdbEAlMLYJx-r3YhNi3lsOfA21~pV21nk7Q-jNgrHwVgwAAWyOaE2BXDfEmsaW4o96Yue3pQkjjysVmE7383C5MjiyW6ZA95F3JfQ8ikNXaHEL~nS1EQ1zj8Og3fkUBA70Hi5UhoIwWPXXXTNcE9wCwlACSqYbrinfMJGELM9jWcnPuTeyI2acEE7WOuyyvEdfckg6EmAb7GT3Rb2fWloCUXjIkTJOW-j0qlYi6CcB0kOO2X0HehziFU~rzKzEkQRv~fD~Nr2vj1p0Uk3oRY28e0z1upT8ufX4XSZ8OqCIm8zOoep~TNeFVl~9cFYyA__%22%7D)
+![TempNest UI](https://i.ibb.co/20px4tyb/modified-image-27.png)
 
 ## 🌟 Features
 
