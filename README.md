@@ -1,4 +1,4 @@
-# 🌤️ TempNest - Smart Weather Companion 🌈
+# 🌤️ TempNest - Smart Weather Companion
 
 **TempNest** is your cozy, modern weather companion that delivers real-time weather updates in a sleek and intuitive interface. Whether you're checking for sunshine or snowfall, TempNest brings you accurate forecasts, temperature insights, and weather visuals—all in one place.
 
